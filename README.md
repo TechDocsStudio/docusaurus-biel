@@ -12,6 +12,6 @@ Need assistance? [Contact us](https://docs.biel.ai/support) for help.
 
 ## License
 
-Copyright (c) 2024 Bie.ai
+Copyright (c) 2024 Biel.ai
 
-Licensed under the [MIT License](LICENSE.md).
+Licensed under the [MIT License](LICENSE).
