@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-biel",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Ask AI bot for technical documentation.",
   "main": "build/index.js",
   "types": "build/index.d.ts",
@@ -19,7 +19,9 @@
     "semi": false
   },
   "devDependencies": {
+    "@docusaurus/core": "^3.0.0",
     "@docusaurus/types": "^3.0.0",
+    "@types/node": "^22.9.0",
     "@types/react": "^18.2.29",
     "@types/react-dom": "^18.2.0",
     "@types/react-helmet": "^6.1.0",

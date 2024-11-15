@@ -1,62 +1,50 @@
-interface BielOptions {
-    bielButtonText?: string;
-    version?: string;
-    customFont?: string;
-    project?: string;
-    buttonStyle?: string;
-    buttonPosition?: string;
-    modalPosition?: string;
-    hideIcon?: boolean;
-    hideExpandButton?: boolean;
-    expandModal?: boolean;
-    errorMessage404?: string;
-    errorMessage403?: string;
-    errorMessageDefault?: string;
-    footerText?: string;
-}
+import { BielOptions, DEFAULT_OPTIONS } from './conf';
+import { camelToKebab } from './utils';
+const path = require('path');
 
-const DEFAULT_OPTIONS: BielOptions = {
-    bielButtonText: 'Ask AI',
-    modalPosition: "bottom-right",
-    buttonStyle: "dark",
-    buttonPosition: 'bottom-right',
-};
-
-function camelToKebab(string: string): string {
-    return string.replace(/([a-z0-9]|(?=[A-Z]))([A-Z])/g, '$1-$2').toLowerCase();
-}
 
 function generateBielScript(options: BielOptions): string {
     const mergedProps: BielOptions = { ...DEFAULT_OPTIONS, ...options };
-    const { project, bielButtonText, ...bielProps } = mergedProps;
-    let scriptContent = `
-        const bielButton = document.createElement('biel-button');
-        bielButton.setAttribute('project', '${project || ""}');
-    `;
+    const { project, bielButtonText, enable, search, ...bielProps } = mergedProps;
+    let scriptContent = '';
 
-    Object.entries(bielProps).forEach(([key, value]) => {
-        if (value !== undefined) {
-            scriptContent += `
-                bielButton.setAttribute('${camelToKebab(key)}', '${value.toString()}');
-            `;
-        }
-    });
+    if (enable) {
+        scriptContent += `
+            const bielButton = document.createElement('biel-button');
+            bielButton.setAttribute('project', '${project || ""}');
+        `;
 
-    scriptContent += `
-        bielButton.textContent = '${bielButtonText || DEFAULT_OPTIONS.bielButtonText}';
-        document.body.appendChild(bielButton);
-    `;
+        Object.entries(bielProps).forEach(([key, value]) => {
+            if (key !== 'enable' && key !== 'bielButtonText' && key !== 'version' && value !== undefined ) {
+                scriptContent += `
+                    bielButton.setAttribute('${camelToKebab(key)}', '${value.toString()}');
+                `;
+            }
+        });
+
+        scriptContent += `
+            bielButton.textContent = '${bielButtonText || DEFAULT_OPTIONS.bielButtonText}';
+            document.body.appendChild(bielButton);
+        `;
+    }
 
     return scriptContent;
 }
 
 module.exports = function (_context: any, options: BielOptions) {
+    const version = options.version || 'latest';
 
-    const version = options.version || 'latest'; 
     return {
         name: 'docusaurus-biel-plugin',
 
+        getThemePath() {
+            // Point to the directory containing your custom SearchBar component
+            return path.resolve(__dirname, './theme');
+        },
+
         injectHtmlTags() {
+            const mergedOptions: BielOptions = { ...DEFAULT_OPTIONS, ...options };
+
             return {
                 headTags: [
                     {
@@ -77,10 +65,17 @@ module.exports = function (_context: any, options: BielOptions) {
                     },
                     {
                         tagName: 'script',
-                        innerHTML: generateBielScript(options),
-                    }
-                ]
+                        innerHTML: generateBielScript(mergedOptions),
+                    },
+                ],
             };
         },
+
+
+        async contentLoaded({ actions }: { actions: any }) {
+            const { setGlobalData } = actions;
+            setGlobalData(options);
+        },
+
     };
 };
