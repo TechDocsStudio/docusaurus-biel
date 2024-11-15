@@ -7,7 +7,7 @@ import { camelToKebab } from '../../utils';
 export default function SearchBar() {
     // Retrieve plugin options
     const pluginData: BielOptions = usePluginData('docusaurus-biel-plugin') || {};
-    const { search = {} as any, customFont, hideExpandButton, project, errorMessage404, errorMessage403, errorMessageDefault, footerText } = {
+    const { search = {} as any, customFont, headerTitle, hideExpandButton, project, errorMessage404, errorMessage403, errorMessageDefault, footerText } = {
         ...DEFAULT_OPTIONS,
         ...pluginData,
     };
@@ -16,6 +16,7 @@ export default function SearchBar() {
         ...DEFAULT_OPTIONS.search,
         ...search,
         customFont,
+        headerTitle,
         hideExpandButton,
         project,
         errorMessage404,

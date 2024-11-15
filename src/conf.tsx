@@ -2,6 +2,7 @@ export interface BielOptions {
     enable?: boolean;
     bielButtonText?: string;
     version?: string;
+    headerTitle?: string;
     customFont?: string;
     project?: string;
     buttonStyle?: string;
