@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-biel",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Ask AI bot for technical documentation.",
   "main": "build/index.js",
   "types": "build/index.d.ts",

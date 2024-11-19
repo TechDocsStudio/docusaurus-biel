@@ -110,10 +110,7 @@ module.exports = {
       {
         // options here, or if you have none, just leave this empty.
         project: 'dssd',
-        version:'latest',
-        search: {
-          enable: true,
-        }
+        version:'latest'
       },
     ],
   ],

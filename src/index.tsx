@@ -1,11 +1,10 @@
 import { BielOptions, DEFAULT_OPTIONS } from './conf';
 import { camelToKebab } from './utils';
-const path = require('path');
 
 
 function generateBielScript(options: BielOptions): string {
     const mergedProps: BielOptions = { ...DEFAULT_OPTIONS, ...options };
-    const { project, bielButtonText, enable, search, ...bielProps } = mergedProps;
+    const { project, bielButtonText, enable, ...bielProps } = mergedProps;
     let scriptContent = '';
 
     if (enable) {
@@ -36,11 +35,6 @@ module.exports = function (_context: any, options: BielOptions) {
 
     return {
         name: 'docusaurus-biel-plugin',
-
-        getThemePath() {
-            // Point to the directory containing your custom SearchBar component
-            return path.resolve(__dirname, './theme');
-        },
 
         injectHtmlTags() {
             const mergedOptions: BielOptions = { ...DEFAULT_OPTIONS, ...options };
