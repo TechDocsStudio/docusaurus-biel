@@ -1,20 +1,32 @@
 export interface BielOptions {
     enable?: boolean;
-    bielButtonText?: string;
-    version?: string;
-    headerTitle?: string;
-    customFont?: string;
     project?: string;
-    buttonStyle?: string;
+    version?: string;
+    bielButtonText?: string;
     buttonPosition?: string;
-    modalPosition?: string;
-    hideIcon?: boolean;
-    hideExpandButton?: boolean;
-    expandModal?: boolean;
-    errorMessage404?: string;
+    buttonStyle?: string;
+    customFont?: string;
+    email?: string;
     errorMessage403?: string;
+    errorMessage404?: string;
     errorMessageDefault?: string;
+    expandModal?: boolean;
     footerText?: string;
+    headerTitle?: string;
+    hideExpandButton?: boolean;
+    hideFeedback?: boolean;
+    hideIcon?: boolean;
+    inputPlaceholderText?: string;
+    modalPosition?: string;
+    sendButtonText?: string;
+    showTermsModal?: boolean;
+    sourcesText?: string;
+    suggestedQuestions?: string;
+    suggestedQuestionsTitle?: string;
+    termsCheckboxText?: string;
+    termsDescription?: string;
+    termsTitle?: string;
+    welcomeMessage?: string;
 }
 
 
