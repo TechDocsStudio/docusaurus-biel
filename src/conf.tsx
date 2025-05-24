@@ -2,24 +2,32 @@ export interface BielOptions {
     enable?: boolean;
     project?: string;
     version?: string;
+    // biel-button
     bielButtonText?: string;
     buttonPosition?: string;
     buttonStyle?: string;
     customFont?: string;
+    hideIcon?: boolean;
+
+    // biel-bot
+    disableInput?: string;
     email?: string;
+    expandModal?: boolean;
+    hideCloseButton?: boolean;
+    hideExpandButton?: boolean;
+    hideRefreshButton?: boolean;
+    hideFeedback?: boolean;
+    modalPosition?: string;
+    showTermsModal?: boolean;
+
+    // biel-bot text
     errorMessage403?: string;
     errorMessage404?: string;
     errorMessageDefault?: string;
-    expandModal?: boolean;
     footerText?: string;
     headerTitle?: string;
-    hideExpandButton?: boolean;
-    hideFeedback?: boolean;
-    hideIcon?: boolean;
     inputPlaceholderText?: string;
-    modalPosition?: string;
     sendButtonText?: string;
-    showTermsModal?: boolean;
     sourcesText?: string;
     suggestedQuestions?: string;
     suggestedQuestionsTitle?: string;
