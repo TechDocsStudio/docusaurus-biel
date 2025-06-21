@@ -2,12 +2,15 @@ export interface BielOptions {
     enable?: boolean;
     project?: string;
     version?: string;
+    
     // biel-button
+    apiKey?: string;
     bielButtonText?: string;
     buttonPosition?: string;
     buttonStyle?: string;
     customFont?: string;
     hideIcon?: boolean;
+    
 
     // biel-bot
     disableInput?: string;
