@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.8] - 2025-01-08
+
+### Added
+
+- Added `aiIcon` parameter to BielOptions interface for specifying AI icon type.
+- Added `hideAvatars` parameter to BielOptions interface for hiding avatars.
+
+### Fixed
+
+- Fixed type inconsistencies: `customFont` is now correctly typed as boolean, `disableInput` is now correctly typed as boolean.
+
 ## [1.0.7] - 2025-06-22
 
 ### Added

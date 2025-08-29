@@ -4,16 +4,17 @@ export interface BielOptions {
     version?: string;
     
     // biel-button
+    aiIcon?: string;
     apiKey?: string;
     bielButtonText?: string;
     buttonPosition?: string;
     buttonStyle?: string;
-    customFont?: string;
+    customFont?: boolean;
+    hideAvatars?: boolean;
     hideIcon?: boolean;
     
-
     // biel-bot
-    disableInput?: string;
+    disableInput?: boolean;
     email?: string;
     expandModal?: boolean;
     hideCloseButton?: boolean;
