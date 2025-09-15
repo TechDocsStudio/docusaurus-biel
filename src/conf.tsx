@@ -21,6 +21,7 @@ export interface BielOptions {
     hideExpandButton?: boolean;
     hideRefreshButton?: boolean;
     hideFeedback?: boolean;
+    hideSources?: boolean;
     modalPosition?: string;
     showTermsModal?: boolean;
 

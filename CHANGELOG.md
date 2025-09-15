@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
-## [1.0.8] - 2025-01-08
+## [1.0.9] - 2025-09-15
+
+### Added
+
+- Added `hideSources` option.
+
+## [1.0.8] - 2025-08-01
 
 ### Added
 
