@@ -10,6 +10,7 @@ export interface BielOptions {
     buttonPosition?: string;
     buttonStyle?: string;
     customFont?: boolean;
+    metadata?: string;
     hideAvatars?: boolean;
     hideIcon?: boolean;
 

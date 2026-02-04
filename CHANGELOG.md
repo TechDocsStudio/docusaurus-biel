@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.11] - 2026-02-04
+
+## Added
+
+- Added metadata option.
+
 ## [1.0.10] - 2025-11-11
 
 ### Added
