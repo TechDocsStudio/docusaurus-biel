@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.12] - 2026-02-17
+
+### Added
+
+- Added MCP options: `mcpServerUrl`, `mcpUrlText`, `mcpUrlDescription`, `mcpClaudeText`, `mcpClaudeDescription`, `mcpCopilotText`, `mcpCopilotDescription`, `mcpCursorText`, `mcpCursorDescription`, `mcpCopiedText`, `mcpUrlCopiedDescription`, `mcpClaudeCopiedDescription`.
+- Added think mode text options: `thinkModeAutoText`, `thinkModeAutoDescription`, `thinkModeFastText`, `thinkModeFastDescription`, `thinkModeThinkText`, `thinkModeThinkDescription`.
+- Added missing options: `hideSettingsButton`, `hideConnectButton`, `keepConversation`, `settingsButtonText`, `connectButtonText`.
+
+### Removed
+
+- Removed unused options: `hideThinkModeButton`, `thinkModeButtonText`.
+
 ## [1.0.11] - 2026-02-04
 
 ## Added

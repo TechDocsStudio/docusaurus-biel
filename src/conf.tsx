@@ -19,12 +19,15 @@ export interface BielOptions {
     email?: string;
     expandModal?: boolean;
     hideCloseButton?: boolean;
+    hideConnectButton?: boolean;
     hideExpandButton?: boolean;
     hideRefreshButton?: boolean;
+    hideSettingsButton?: boolean;
     hideFeedback?: boolean;
     hideSources?: boolean;
-    hideThinkModeButton?: boolean;
     hideTooltips?: boolean;
+    keepConversation?: boolean;
+    mcpServerUrl?: string;
     modalPosition?: string;
     showTermsModal?: boolean;
     thinkModeEnabled?: boolean;
@@ -33,6 +36,7 @@ export interface BielOptions {
     assistantLabel?: string;
     closeButtonText?: string;
     collapseButtonText?: string;
+    connectButtonText?: string;
     errorMessage403?: string;
     errorMessage404?: string;
     errorMessageDefault?: string;
@@ -40,15 +44,32 @@ export interface BielOptions {
     footerText?: string;
     headerTitle?: string;
     inputPlaceholderText?: string;
+    mcpClaudeDescription?: string;
+    mcpClaudeText?: string;
+    mcpCopiedText?: string;
+    mcpCopilotDescription?: string;
+    mcpCopilotText?: string;
+    mcpCursorDescription?: string;
+    mcpCursorText?: string;
+    mcpUrlCopiedDescription?: string;
+    mcpClaudeCopiedDescription?: string;
+    mcpUrlDescription?: string;
+    mcpUrlText?: string;
     refreshButtonText?: string;
     sendButtonText?: string;
+    settingsButtonText?: string;
     sourcesText?: string;
     suggestedQuestions?: string;
     suggestedQuestionsTitle?: string;
     termsCheckboxText?: string;
     termsDescription?: string;
     termsTitle?: string;
-    thinkModeButtonText?: string;
+    thinkModeAutoDescription?: string;
+    thinkModeAutoText?: string;
+    thinkModeFastDescription?: string;
+    thinkModeFastText?: string;
+    thinkModeThinkDescription?: string;
+    thinkModeThinkText?: string;
     welcomeMessage?: string;
 }
 
