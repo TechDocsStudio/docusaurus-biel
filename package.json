@@ -1,7 +1,23 @@
 {
   "name": "docusaurus-biel",
-  "version": "1.0.12",
-  "description": "Ask AI bot for technical documentation.",
+  "version": "1.0.13",
+  "description": "Docusaurus AI chatbot and AI search plugin. Add an Ask AI assistant to your Docusaurus docs with source-linked answers, powered by Biel.ai.",
+  "keywords": [
+    "docusaurus",
+    "docusaurus-plugin",
+    "ai",
+    "chatbot",
+    "ai-search",
+    "ask-ai",
+    "documentation",
+    "docs",
+    "rag",
+    "search"
+  ],
+  "homepage": "https://biel.ai/integrations/docusaurus",
+  "bugs": {
+    "url": "https://github.com/TechDocsStudio/docusaurus-biel/issues"
+  },
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
