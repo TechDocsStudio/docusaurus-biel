@@ -18,7 +18,7 @@ The integration works with any Docusaurus v3 site and adds both chat and search 
 
 ## Get started
 
-See the [Docusaurus AI chatbot integration guide](https://docs.biel.ai/installation/docusaurus) for installation and setup instructions.
+See the [Docusaurus AI chatbot integration guide](https://docs.biel.ai/assets/images/biel-widget-docs-bd28548cf26a37bcb7c496487280bbfe.png) for installation and setup instructions.
 
 
 
