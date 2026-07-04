@@ -2,6 +2,16 @@
   "name": "docusaurus-biel",
   "version": "1.0.12",
   "description": "Ask AI bot for technical documentation.",
+  "keywords": [
+    "docusaurus-plugin",
+    "docusaurus",
+    "ai",
+    "chatbot",
+    "search",
+    "documentation",
+    "ask-ai",
+    "rag"
+  ],
   "main": "build/index.js",
   "types": "build/index.d.ts",
   "scripts": {
