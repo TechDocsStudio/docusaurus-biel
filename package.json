@@ -41,5 +41,8 @@
   },
   "peerDependencies": {
     "@docusaurus/core": "3.x"
+  },
+  "dependencies": {
+    "biel-search": "0.1.94"
   }
 }

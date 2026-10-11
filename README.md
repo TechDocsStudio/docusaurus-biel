@@ -31,3 +31,13 @@ Need assistance? [Contact us](https://docs.biel.ai/support) for help.
 Copyright (c) 2024 Biel.ai  
 
 Licensed under the [MIT License](LICENSE).
+
+## Widget compatibility and development
+
+The default CDN artifact is pinned to `biel-search` 0.1.94. Set `version` explicitly to select another published artifact (including `latest`). Public option types come from the pinned widget's canonical component declarations; arrays/objects are assigned as properties after the custom element is defined. Configuration is serialized for script context, and `bielButtonText` is literal text. Existing `enable: false` disables the button.
+
+Validated matrix: Docusaurus 3.0.0 and 3.10.2, React 18.3.1, Webpack 5.96.1; site builds ran on Node 25.6.1 (current Docusaurus requires Node >=20), plugin compilation ran on Node 18.20.8. The diagnostic pins Webpack because an unpinned current graph failed in the older framework's theme before loading this plugin.
+
+Run `npm ci`, `npm run build`, and `node tests/packed-site.cjs /tmp/biel-sites` to build/pack/install the actual plugin into both site consumers. With Puppeteer 24.43.1 available on NODE_PATH and a trusted Chrome executable, run `PUPPETEER_EXECUTABLE_PATH=/path/to/chrome node tests/browser-contract.cjs /tmp/biel-sites/3.10.2`. The browser maps pinned widget assets locally, fakes API/WS, blocks external requests, and checks literal quotes/Unicode/script-closing text, boolean/array props and the button-to-bot contract. Existing scripts and workflows are unchanged.
+
+This pin selects the currently published 0.1.94 artifact. The separate widget sanitizer/dependency remediation is not yet published in that artifact; update this pin deliberately after its release and repeat the artifact/browser matrix.
