@@ -13,7 +13,7 @@ export type BielOptions = Partial<Pick<Widget, WidgetDataKeys>> & {
   bielButtonText?: string
 }
 
-export const WIDGET_VERSION = "0.1.94"
+export const WIDGET_VERSION = "latest"
 
 export const DEFAULT_OPTIONS: BielOptions = {
   bielButtonText: "Ask AI",

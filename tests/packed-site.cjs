@@ -84,7 +84,7 @@ try {
       path.join(consumer, "build/index.html"),
       "utf8",
     )
-    assert(html.includes("biel-search@0.1.94"))
+    assert(html.includes("biel-search@latest"))
     const plugin = require(path.join(consumer, "node_modules/docusaurus-biel"))(
       {},
       options,
@@ -100,7 +100,7 @@ try {
     assert(
       installedPlugin({}, {})
         .injectHtmlTags()
-        .postBodyTags[0].attributes.src.includes("biel-search@0.1.94"),
+        .postBodyTags[0].attributes.src.includes("biel-search@latest"),
     )
     assert.equal(
       installedPlugin({}, { enable: false }).injectHtmlTags().postBodyTags[1]
@@ -108,9 +108,14 @@ try {
       "",
     )
     assert(
-      installedPlugin({}, { version: "latest" })
+      installedPlugin({}, { version: "0.1.94" })
         .injectHtmlTags()
-        .postBodyTags[0].attributes.src.includes("biel-search@latest"),
+        .postBodyTags[0].attributes.src.includes("biel-search@0.1.94"),
+    )
+    assert(
+      installedPlugin({}, { version: "0.1.94" })
+        .injectHtmlTags()
+        .headTags[0].attributes.href.includes("biel-search@0.1.94"),
     )
     fs.writeFileSync(
       path.join(consumer, "contract.ts"),
@@ -145,7 +150,7 @@ plugin({}, {unknownAuditFlag:true});
       JSON.stringify(options),
     )
     console.log(
-      `PASS packed Docusaurus ${version}: installed plugin, actual site build, pinned artifact and safe HTML serialization`,
+      `PASS packed Docusaurus ${version}: installed plugin, actual site build, latest default, explicit numeric override and safe HTML serialization`,
     )
   }
 } finally {
