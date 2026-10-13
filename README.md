@@ -6,7 +6,6 @@ Ask AI chatbot plugin for Docusaurus sites, powered by [Biel.ai](https://biel.ai
 
 Add AI to your Docusaurus site using Biel.ai's official plugin.
 The integration works with any Docusaurus v3 site and adds both chat and search capabilities to your documentation.
-The widget loads from the CDN using `latest` by default. Set the plugin's `version` option to choose a specific release; you do not need to install `biel-search` separately.
 
 *Note: A Biel.ai plan is required to use this plugin. Try it free for 14 days—no credit card required.*
 
@@ -20,8 +19,6 @@ The widget loads from the CDN using `latest` by default. Set the plugin's `versi
 ## Get started
 
 See the [Docusaurus AI chatbot integration guide](https://docs.biel.ai/installation/docusaurus) for installation and setup instructions.
-
-
 
 ## Support
 
