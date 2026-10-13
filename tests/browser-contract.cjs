@@ -3,11 +3,11 @@ const http = require("node:http"),
   path = require("node:path"),
   assert = require("node:assert/strict")
 const puppeteer = require("puppeteer")
-const widget = path.join(
-  process.env.BIEL_WIDGET_DIR ||
-    path.dirname(require.resolve("biel-search/package.json")),
-  "dist/biel-search",
+assert(
+  process.env.BIEL_WIDGET_DIR,
+  "Set BIEL_WIDGET_DIR to the widget fixture package directory",
 )
+const widget = path.join(process.env.BIEL_WIDGET_DIR, "dist/biel-search")
 const site = path.resolve(process.argv[2])
 const expected = JSON.parse(fs.readFileSync(path.join(site, "expected.json")))
 const prefix =
