@@ -2,6 +2,30 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.0.14] - 2026-10-13
+
+### Added
+
+- Added widget options for initial messages, default think mode, loading indicators, math and diagram rendering, and Codex MCP connection text.
+- Added consumer type checks and packed Docusaurus site and browser regression tests.
+
+### Fixed
+
+- Preserved boolean and structured widget options by setting component properties after `biel-button` is defined.
+- Safely serialized widget configuration and button text containing quotes, HTML, or special characters.
+- Fixed the published plugin declaration to export a callable Docusaurus plugin and kept widget option types self-contained.
+
+### Changed
+
+- Added stricter types for icon, think mode, loading indicator, and initial message options.
+- Documented the default `latest` CDN widget version, explicit version overrides, and linked to the installation guide.
+
+## [1.0.13] - 2026-06-10
+
+### Changed
+
+- Improved npm discoverability with a Docusaurus-focused description and keywords, an integration homepage, and an issue tracker link.
+
 ## [1.0.12] - 2026-02-17
 
 ### Added
