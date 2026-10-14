@@ -19,6 +19,12 @@ Biel.ai's official plugin adds conversational answers and documentation search t
 
 See the [Docusaurus AI assistant integration guide](https://docs.biel.ai/installation/docusaurus) for installation and setup instructions.
 
+## MCP server for docs
+
+Connect the same indexed documentation to Claude Code, Codex, and other MCP-compatible clients with Biel.ai's [hosted MCP server](https://biel.ai/mcp-server-for-docs). This plugin embeds the website assistant. Configure the hosted MCP endpoint separately in your AI client.
+
+Hosted MCP requires a [plan that includes it](https://biel.ai/pricing). See the [MCP connection guide](https://docs.biel.ai/integrations/mcp-server) for client setup.
+
 ## Support
 
 Need assistance? [Contact us](https://docs.biel.ai/support) for help.
