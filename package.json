@@ -1,6 +1,6 @@
 {
   "name": "docusaurus-biel",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "Biel.ai AI assistant plugin for Docusaurus documentation, with source-linked answers and documentation search.",
   "keywords": [
     "docusaurus",
