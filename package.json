@@ -1,7 +1,7 @@
 {
   "name": "docusaurus-biel",
   "version": "1.0.14",
-  "description": "Docusaurus AI chatbot and AI search plugin. Add an Ask AI assistant to your Docusaurus docs with source-linked answers, powered by Biel.ai.",
+  "description": "Biel.ai AI assistant plugin for Docusaurus documentation, with source-linked answers and documentation search.",
   "keywords": [
     "docusaurus",
     "docusaurus-plugin",
